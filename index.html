@@ -72,7 +72,7 @@
     <div class="header-sub">CRM · Seguimiento de ventas y leads 2026</div>
   </div>
   <div class="header-date">
-    Actualizado: 06 May 2026 16:38<br>
+    Actualizado: 06 May 2026 17:08<br>
     Período: 2025 – 2026<br>
     Fuente: Odoo CRM
     <br><span class="update-badge">🔄 Auto-actualizado</span>
@@ -181,7 +181,7 @@
 
 <div class="footer">
   <span>Asertis BPS · Dashboard Comercial · Brenda Maria Luna Fontalvo</span>
-  <span>Generado: 06/05/2026 16:38 · Datos: Odoo CRM</span>
+  <span>Generado: 06/05/2026 17:08 · Datos: Odoo CRM</span>
 </div>
 
 <script>
@@ -239,7 +239,7 @@ funnelData.forEach((d,i)=>{
 });
 
 const vendorColors=['#2563eb','#0d9488','rgba(37,99,235,0.35)','rgba(37,99,235,0.25)'];
-const vendorData=[{"name": "Richard Casta\u00f1o", "val": 56774000}, {"name": "Brenda Maria", "val": 28405202}, {"name": "Jennifer Hoyos", "val": 17060000}];
+const vendorData=[{"name": "Richard Casta\u00f1o", "val": 56774000}, {"name": "Brenda Maria", "val": 28405202}, {"name": "Jennifer Hoyos", "val": 20060000}];
 const maxV=Math.max(...vendorData.map(d=>d.val));
 const vendorEl=document.getElementById('vendors');
 vendorData.forEach((d,i)=>{
@@ -273,7 +273,7 @@ new Chart(document.getElementById('presChart'),{
 
 const etapaColors=['rgba(0,0,0,0.1)','#16a34a','#2563eb','rgba(37,99,235,0.35)','#0d9488','rgba(37,99,235,0.6)','#d97706'];
 const etapaLabels=["Perdido", "Ganado", "Contactado", "Propuesta", "Seguimiento", "Nuevo", "Negociaci\u00f3n"];
-const etapaVals=[47, 10, 4, 4, 3, 3, 2];
+const etapaVals=[47, 10, 5, 4, 3, 3, 2];
 new Chart(document.getElementById('etapaChart'),{
   type:'doughnut',
   data:{labels:etapaLabels,datasets:[{data:etapaVals,backgroundColor:etapaColors,borderWidth:2,borderColor:'#fff'}]},
@@ -281,7 +281,7 @@ new Chart(document.getElementById('etapaChart'),{
     plugins:{legend:{display:false},tooltip:{backgroundColor:'#fff',borderColor:'rgba(0,0,0,0.12)',borderWidth:1,titleColor:'#6b7280',bodyColor:'#111827'}},
     cutout:'62%'}
 });
-const total=73;
+const total=74;
 const legendEl=document.getElementById('etapa-legend');
 etapaLabels.forEach((l,i)=>{
   const pct=Math.round(etapaVals[i]/total*100);
