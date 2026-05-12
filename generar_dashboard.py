@@ -340,7 +340,7 @@ weekData.forEach(d=>{{
   const metaPct=(META/maxW*100).toFixed(1);
   const fillColor=d.n>=META?'#2563eb':(d.n>=2?'#d97706':'#d1d5db');
   const pc=d.n>=META?'p-green':(d.n>=2?'p-amber':(d.actual?'p-red':'p-gray'));
-  const pt=d.n>=META?'cumple':(d.n>=2?'parcial':(d.actual?'sin datos':'parcial'));
+  const pt=d.n>=META?'cumple':(d.n>=2?'no cumple':(d.actual?'sin datos':'no cumple'));
   weekEl.innerHTML+=`<div class="bar-row">
     <span class="bar-lbl" style="width:62px;font-family:'DM Mono',monospace;">${{d.sem}}${{d.actual?' ←':''}}</span>
     <div class="bar-track">
