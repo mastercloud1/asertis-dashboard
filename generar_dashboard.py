@@ -178,7 +178,7 @@ html = f"""<!DOCTYPE html>
   .bar-meta{{position:absolute;top:-4px;bottom:-4px;width:2px;border-radius:1px;background:#dc2626;z-index:2}}
   .bar-val{{font-size:13px;font-weight:500;color:var(--text);flex-shrink:0;font-family:'DM Mono',monospace}}
   .pill{{display:inline-block;font-size:12px;font-weight:500;padding:3px 8px;border-radius:20px;flex-shrink:0}}
-  .p-red{{background:#fee2e2;color:#b91c1c}} .p-green{{background:#dcfce7;color:#15803d}} .p-amber{{background:#fef3c7;color:#b45309}} .p-gray{{background:rgba(0,0,0,.06);color:var(--muted)}}
+  .p-red{{background:#fee2e2;color:#b91c1c}} .p-green{{background:#dcfce7;color:#15803d}} .p-amber{{background:#fee2e2;color:#b91c1c}} .p-gray{{background:rgba(0,0,0,.06);color:var(--muted)}}
   .insight{{background:#eff6ff;border:1px solid #bfdbfe;border-radius:var(--radius-sm);padding:12px 15px;margin-top:16px;font-size:13px;color:var(--muted2);line-height:1.6}}
   .insight strong{{color:var(--text);font-weight:500}}
   .chart-grid{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
