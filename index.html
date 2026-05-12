@@ -72,7 +72,7 @@
     <div class="header-sub">CRM · Seguimiento de ventas y leads 2026</div>
   </div>
   <div class="header-date">
-    Actualizado: 12 May 2026 15:42<br>
+    Actualizado: 12 May 2026 20:58<br>
     Período: 2025 – 2026<br>
     Fuente: Odoo CRM
     <br><span class="update-badge">🔄 Auto-actualizado</span>
@@ -181,7 +181,7 @@
 
 <div class="footer">
   <span>Asertis BPS · Dashboard Comercial · Brenda Maria Luna Fontalvo</span>
-  <span>Generado: 12/05/2026 15:42 · Datos: Odoo CRM</span>
+  <span>Generado: 12/05/2026 20:58 · Datos: Odoo CRM</span>
 </div>
 
 <script>
@@ -212,7 +212,7 @@ weekData.forEach(d=>{
   const metaPct=(META/maxW*100).toFixed(1);
   const fillColor=d.n>=META?'#2563eb':(d.n>=2?'#d97706':'#d1d5db');
   const pc=d.n>=META?'p-green':(d.n>=2?'p-amber':(d.actual?'p-red':'p-gray'));
-  const pt=d.n>=META?'cumple':(d.n>=2?'parcial':(d.actual?'sin datos':'parcial'));
+  const pt=d.n>=META?'cumple':(d.n>=2?'no cumple':(d.actual?'sin datos':'no cumple'));
   weekEl.innerHTML+=`<div class="bar-row">
     <span class="bar-lbl" style="width:62px;font-family:'DM Mono',monospace;">${d.sem}${d.actual?' ←':''}</span>
     <div class="bar-track">
