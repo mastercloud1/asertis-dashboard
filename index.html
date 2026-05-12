@@ -72,7 +72,7 @@
     <div class="header-sub">CRM · Seguimiento de ventas y leads 2026</div>
   </div>
   <div class="header-date">
-    Actualizado: 12 May 2026 20:58<br>
+    Actualizado: 12 May 2026 21:47<br>
     Período: 2025 – 2026<br>
     Fuente: Odoo CRM
     <br><span class="update-badge">🔄 Auto-actualizado</span>
@@ -85,7 +85,7 @@
     <div class="kpi-val">$28.4M</div>
     <div class="kpi-note">COP · 2 negocios cerrados</div>
   </div>
-  <div class="kpi-tile" style="--accent-bar:#d97706;">
+  <div class="kpi-tile" style="--accent-bar:#ef4444;">
     <div class="kpi-lbl">Cumplimiento mayo</div>
     <div class="kpi-val">50.7% <span class="badge bd-amber">en curso</span></div>
     <div class="kpi-note">$28.4M de $56.0M</div>
@@ -100,7 +100,7 @@
     <div class="kpi-val">0 <span class="badge bd-red">meta 3</span></div>
     <div class="kpi-note">semana actual · meta 3/semana</div>
   </div>
-  <div class="kpi-tile" style="--accent-bar:#d97706;">
+  <div class="kpi-tile" style="--accent-bar:#ef4444;">
     <div class="kpi-lbl">Tasa de conversión</div>
     <div class="kpi-val">4.3%</div>
     <div class="kpi-note">2 ganados / 47 oportunidades</div>
@@ -115,9 +115,9 @@
 <div class="main-grid">
   <div class="card">
     <div class="card-title">KPI 1 — Cumplimiento de presupuesto <span class="badge bd-amber">50.7% · mes actual</span></div>
-    <div class="kpi-detail-big" style="color:#d97706;">$28.4M</div>
+    <div class="kpi-detail-big" style="color:#ef4444;">$28.4M</div>
     <div class="kpi-detail-sub">de $56.0M COP presupuestados este mes</div>
-    <div class="gauge-track"><div class="gauge-fill" style="width:50.7%;background:linear-gradient(90deg,#d97706,#f59e0b);"></div></div>
+    <div class="gauge-track"><div class="gauge-fill" style="width:50.7%;background:linear-gradient(90deg,#ef4444,#f59e0b);"></div></div>
     <div class="gauge-labels"><span>$28.4M</span><span>Meta: $56.0M</span><span>50.7%</span></div>
     <div class="divider"></div>
     <div class="sub-label">Presupuesto vs real mensual 2026</div>
@@ -181,7 +181,7 @@
 
 <div class="footer">
   <span>Asertis BPS · Dashboard Comercial · Brenda Maria Luna Fontalvo</span>
-  <span>Generado: 12/05/2026 20:58 · Datos: Odoo CRM</span>
+  <span>Generado: 12/05/2026 21:47 · Datos: Odoo CRM</span>
 </div>
 
 <script>
@@ -210,7 +210,7 @@ const weekEl=document.getElementById('week-bars');
 weekData.forEach(d=>{
   const pct=(d.n/maxW*100).toFixed(1);
   const metaPct=(META/maxW*100).toFixed(1);
-  const fillColor=d.n>=META?'#2563eb':(d.n>=2?'#d97706':'#d1d5db');
+  const fillColor=d.n>=META?'#2563eb':(d.n>=2?'#ef4444':'#d1d5db');
   const pc=d.n>=META?'p-green':(d.n>=2?'p-amber':(d.actual?'p-red':'p-gray'));
   const pt=d.n>=META?'cumple':(d.n>=2?'no cumple':(d.actual?'sin datos':'no cumple'));
   weekEl.innerHTML+=`<div class="bar-row">
@@ -271,7 +271,7 @@ new Chart(document.getElementById('presChart'),{
       x:{ticks:{color:'#6b7280',font:{size:12},autoSkip:false,maxRotation:0},grid:{display:false},border:{display:false}}}}
 });
 
-const etapaColors=['rgba(0,0,0,0.1)','#16a34a','#2563eb','rgba(37,99,235,0.35)','#0d9488','rgba(37,99,235,0.6)','#d97706'];
+const etapaColors=['rgba(0,0,0,0.1)','#16a34a','#2563eb','rgba(37,99,235,0.35)','#0d9488','rgba(37,99,235,0.6)','#ef4444'];
 const etapaLabels=["Perdido", "Ganado", "Contactado", "Propuesta", "Seguimiento", "Nuevo", "Negociaci\u00f3n"];
 const etapaVals=[47, 10, 5, 4, 3, 3, 2];
 new Chart(document.getElementById('etapaChart'),{

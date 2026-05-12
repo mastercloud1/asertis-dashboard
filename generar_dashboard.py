@@ -110,19 +110,19 @@ def fmt_cop(val):
 kpi1_val   = fmt_cop(total_mayo)
 kpi1_badge_class = 'bd-green' if cumplimiento>=100 else ('bd-amber' if cumplimiento>=50 else 'bd-red')
 kpi1_badge_text  = f'{cumplimiento}% · mes actual'
-kpi1_color = '#16a34a' if cumplimiento>=100 else ('#d97706' if cumplimiento>=50 else '#dc2626')
+kpi1_color = '#16a34a' if cumplimiento>=100 else ('#ef4444' if cumplimiento>=50 else '#dc2626')
 gauge1_pct = min(cumplimiento, 100)
-gauge1_grad = '#16a34a,#22c55e' if cumplimiento>=100 else ('#d97706,#f59e0b' if cumplimiento>=50 else '#dc2626,#ef4444')
+gauge1_grad = '#16a34a,#22c55e' if cumplimiento>=100 else ('#ef4444,#f59e0b' if cumplimiento>=50 else '#dc2626,#ef4444')
 
 kpi2_val   = leads_sem_actual
 kpi2_badge_class = 'bd-green' if leads_sem_actual>=3 else ('bd-amber' if leads_sem_actual>=2 else 'bd-red')
 kpi2_badge_text  = f'{leads_sem_actual} · sem {SEM_ACTUAL} {"✓" if leads_sem_actual>=3 else "✗"}'
-kpi2_color = '#16a34a' if leads_sem_actual>=3 else ('#d97706' if leads_sem_actual>=2 else '#dc2626')
+kpi2_color = '#16a34a' if leads_sem_actual>=3 else ('#ef4444' if leads_sem_actual>=2 else '#dc2626')
 gauge2_pct = min(leads_sem_actual/3*100, 100)
-gauge2_grad = '#16a34a,#22c55e' if leads_sem_actual>=3 else ('#d97706,#f59e0b' if leads_sem_actual>=2 else '#dc2626,#ef4444')
+gauge2_grad = '#16a34a,#22c55e' if leads_sem_actual>=3 else ('#ef4444,#f59e0b' if leads_sem_actual>=2 else '#dc2626,#ef4444')
 
-strip_cumpl_bar  = '#16a34a' if cumplimiento>=100 else ('#d97706' if cumplimiento>=50 else '#dc2626')
-strip_leads_bar  = '#16a34a' if leads_sem_actual>=3 else ('#d97706' if leads_sem_actual>=2 else '#dc2626')
+strip_cumpl_bar  = '#16a34a' if cumplimiento>=100 else ('#ef4444' if cumplimiento>=50 else '#dc2626')
+strip_leads_bar  = '#16a34a' if leads_sem_actual>=3 else ('#ef4444' if leads_sem_actual>=2 else '#dc2626')
 
 # ── Generar HTML ─────────────────────────────────────────────────────────────
 html = f"""<!DOCTYPE html>
@@ -227,7 +227,7 @@ html = f"""<!DOCTYPE html>
     <div class="kpi-val">{leads_sem_actual} <span class="badge {kpi2_badge_class}">{'cumple ✓' if leads_sem_actual>=3 else 'meta 3'}</span></div>
     <div class="kpi-note">semana actual · meta 3/semana</div>
   </div>
-  <div class="kpi-tile" style="--accent-bar:#d97706;">
+  <div class="kpi-tile" style="--accent-bar:#ef4444;">
     <div class="kpi-lbl">Tasa de conversión</div>
     <div class="kpi-val">{conversion}%</div>
     <div class="kpi-note">{len(brenda_ganado)} ganados / {total_opps} oportunidades</div>
@@ -338,7 +338,7 @@ const weekEl=document.getElementById('week-bars');
 weekData.forEach(d=>{{
   const pct=(d.n/maxW*100).toFixed(1);
   const metaPct=(META/maxW*100).toFixed(1);
-  const fillColor=d.n>=META?'#2563eb':(d.n>=2?'#d97706':'#d1d5db');
+  const fillColor=d.n>=META?'#2563eb':(d.n>=2?'#ef4444':'#d1d5db');
   const pc=d.n>=META?'p-green':(d.n>=2?'p-amber':(d.actual?'p-red':'p-gray'));
   const pt=d.n>=META?'cumple':(d.n>=2?'no cumple':(d.actual?'sin datos':'no cumple'));
   weekEl.innerHTML+=`<div class="bar-row">
@@ -399,7 +399,7 @@ new Chart(document.getElementById('presChart'),{{
       x:{{ticks:{{color:'#6b7280',font:{{size:12}},autoSkip:false,maxRotation:0}},grid:{{display:false}},border:{{display:false}}}}}}}}
 }});
 
-const etapaColors=['rgba(0,0,0,0.1)','#16a34a','#2563eb','rgba(37,99,235,0.35)','#0d9488','rgba(37,99,235,0.6)','#d97706'];
+const etapaColors=['rgba(0,0,0,0.1)','#16a34a','#2563eb','rgba(37,99,235,0.35)','#0d9488','rgba(37,99,235,0.6)','#ef4444'];
 const etapaLabels={json.dumps(etapa_labels)};
 const etapaVals={json.dumps(etapa_vals)};
 new Chart(document.getElementById('etapaChart'),{{
