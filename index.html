@@ -72,7 +72,7 @@
     <div class="header-sub">CRM · Seguimiento de ventas y leads 2026</div>
   </div>
   <div class="header-date">
-    Actualizado: 12 May 2026 22:17<br>
+    Actualizado: 13 May 2026 13:51<br>
     Período: 2025 – 2026<br>
     Fuente: Odoo CRM
     <br><span class="update-badge">🔄 Auto-actualizado</span>
@@ -92,7 +92,7 @@
   </div>
   <div class="kpi-tile" style="--accent-bar:#0d9488;">
     <div class="kpi-lbl">Pipeline activo</div>
-    <div class="kpi-val">$168.8M</div>
+    <div class="kpi-val">$157.8M</div>
     <div class="kpi-note">COP · oportunidades abiertas</div>
   </div>
   <div class="kpi-tile" style="--accent-bar:#16a34a;">
@@ -102,13 +102,13 @@
   </div>
   <div class="kpi-tile" style="--accent-bar:#ef4444;">
     <div class="kpi-lbl">Tasa de conversión</div>
-    <div class="kpi-val">3.9%</div>
-    <div class="kpi-note">2 ganados / 51 oportunidades</div>
+    <div class="kpi-val">4.0%</div>
+    <div class="kpi-note">2 ganados / 50 oportunidades</div>
   </div>
   <div class="kpi-tile" style="--accent-bar:#6b7280;">
     <div class="kpi-lbl">Oportunidades totales</div>
-    <div class="kpi-val">51</div>
-    <div class="kpi-note">35 perdidas · 14 activas</div>
+    <div class="kpi-val">50</div>
+    <div class="kpi-note">35 perdidas · 13 activas</div>
   </div>
 </div>
 
@@ -181,7 +181,7 @@
 
 <div class="footer">
   <span>Asertis BPS · Dashboard Comercial · Brenda Maria Luna Fontalvo</span>
-  <span>Generado: 12/05/2026 22:17 · Datos: Odoo CRM</span>
+  <span>Generado: 13/05/2026 13:51 · Datos: Odoo CRM</span>
 </div>
 
 <script>
@@ -203,7 +203,7 @@ presData.forEach(d=>{
   </div>`;
 });
 
-const weekData = [{"sem": "S38/25", "n": 12, "actual": false}, {"sem": "S39/25", "n": 2, "actual": false}, {"sem": "S6", "n": 4, "actual": false}, {"sem": "S7", "n": 1, "actual": false}, {"sem": "S8", "n": 1, "actual": false}, {"sem": "S9", "n": 2, "actual": false}, {"sem": "S11", "n": 7, "actual": false}, {"sem": "S12", "n": 1, "actual": false}, {"sem": "S13", "n": 2, "actual": false}, {"sem": "S14", "n": 4, "actual": false}, {"sem": "S15", "n": 1, "actual": false}, {"sem": "S16", "n": 2, "actual": false}, {"sem": "S18", "n": 4, "actual": false}, {"sem": "S19", "n": 4, "actual": false}, {"sem": "S20", "n": 4, "actual": true}];
+const weekData = [{"sem": "S38/25", "n": 12, "actual": false}, {"sem": "S39/25", "n": 2, "actual": false}, {"sem": "S6", "n": 4, "actual": false}, {"sem": "S7", "n": 1, "actual": false}, {"sem": "S8", "n": 1, "actual": false}, {"sem": "S9", "n": 2, "actual": false}, {"sem": "S11", "n": 7, "actual": false}, {"sem": "S12", "n": 1, "actual": false}, {"sem": "S13", "n": 1, "actual": false}, {"sem": "S14", "n": 4, "actual": false}, {"sem": "S15", "n": 1, "actual": false}, {"sem": "S16", "n": 2, "actual": false}, {"sem": "S18", "n": 4, "actual": false}, {"sem": "S19", "n": 4, "actual": false}, {"sem": "S20", "n": 4, "actual": true}];
 const META=3;
 const maxW=Math.max(...weekData.map(d=>d.n),META);
 const weekEl=document.getElementById('week-bars');
@@ -226,7 +226,7 @@ weekData.forEach(d=>{
 
 const funnelColors=['rgba(37,99,235,0.2)','rgba(37,99,235,0.35)','rgba(37,99,235,0.5)',
   'rgba(37,99,235,0.65)','rgba(37,99,235,0.85)','#16a34a','rgba(0,0,0,0.1)'];
-const funnelData=[{"e": "Nuevo", "n": 3}, {"e": "Contactado", "n": 4}, {"e": "Seguimiento", "n": 2}, {"e": "Propuesta", "n": 2}, {"e": "Negociaci\u00f3n", "n": 3}, {"e": "Ganado", "n": 2}, {"e": "Perdido", "n": 35}];
+const funnelData=[{"e": "Nuevo", "n": 3}, {"e": "Contactado", "n": 4}, {"e": "Seguimiento", "n": 2}, {"e": "Propuesta", "n": 2}, {"e": "Negociaci\u00f3n", "n": 2}, {"e": "Ganado", "n": 2}, {"e": "Perdido", "n": 35}];
 const maxF=Math.max(...funnelData.map(d=>d.n));
 const funnelEl=document.getElementById('funnel');
 funnelData.forEach((d,i)=>{
@@ -273,7 +273,7 @@ new Chart(document.getElementById('presChart'),{
 
 const etapaColors=['rgba(0,0,0,0.1)','#16a34a','#2563eb','rgba(37,99,235,0.35)','#0d9488','rgba(37,99,235,0.6)','#ef4444'];
 const etapaLabels=["Perdido", "Ganado", "Contactado", "Propuesta", "Seguimiento", "Nuevo", "Negociaci\u00f3n"];
-const etapaVals=[49, 10, 5, 5, 5, 3, 3];
+const etapaVals=[50, 10, 5, 4, 5, 3, 3];
 new Chart(document.getElementById('etapaChart'),{
   type:'doughnut',
   data:{labels:etapaLabels,datasets:[{data:etapaVals,backgroundColor:etapaColors,borderWidth:2,borderColor:'#fff'}]},
