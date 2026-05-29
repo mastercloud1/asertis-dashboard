@@ -72,7 +72,7 @@
     <div class="header-sub">CRM · Seguimiento de ventas y leads 2026</div>
   </div>
   <div class="header-date">
-    Actualizado: 26 May 2026 19:45<br>
+    Actualizado: 29 May 2026 19:44<br>
     Período: 2025 – 2026<br>
     Fuente: Odoo CRM
     <br><span class="update-badge">🔄 Auto-actualizado</span>
@@ -181,7 +181,7 @@
 
 <div class="footer">
   <span>Asertis BPS · Dashboard Comercial · Brenda Maria Luna Fontalvo</span>
-  <span>Generado: 26/05/2026 19:45 · Datos: Odoo CRM</span>
+  <span>Generado: 29/05/2026 19:44 · Datos: Odoo CRM</span>
 </div>
 
 <script>
@@ -226,7 +226,7 @@ weekData.forEach(d=>{
 
 const funnelColors=['rgba(37,99,235,0.2)','rgba(37,99,235,0.35)','rgba(37,99,235,0.5)',
   'rgba(37,99,235,0.65)','rgba(37,99,235,0.85)','#16a34a','rgba(0,0,0,0.1)'];
-const funnelData=[{"e": "Nuevo", "n": 2}, {"e": "Contactado", "n": 4}, {"e": "Seguimiento", "n": 3}, {"e": "Propuesta", "n": 4}, {"e": "Negociaci\u00f3n", "n": 2}, {"e": "Ganado", "n": 2}, {"e": "Perdido", "n": 34}];
+const funnelData=[{"e": "Nuevo", "n": 3}, {"e": "Contactado", "n": 4}, {"e": "Seguimiento", "n": 3}, {"e": "Propuesta", "n": 3}, {"e": "Negociaci\u00f3n", "n": 2}, {"e": "Ganado", "n": 2}, {"e": "Perdido", "n": 34}];
 const maxF=Math.max(...funnelData.map(d=>d.n));
 const funnelEl=document.getElementById('funnel');
 funnelData.forEach((d,i)=>{
@@ -273,7 +273,7 @@ new Chart(document.getElementById('presChart'),{
 
 const etapaColors=['rgba(0,0,0,0.1)','#16a34a','#2563eb','rgba(37,99,235,0.35)','#0d9488','rgba(37,99,235,0.6)','#ef4444'];
 const etapaLabels=["Perdido", "Ganado", "Contactado", "Propuesta", "Seguimiento", "Nuevo", "Negociaci\u00f3n"];
-const etapaVals=[48, 10, 5, 6, 6, 2, 3];
+const etapaVals=[48, 10, 4, 5, 6, 3, 4];
 new Chart(document.getElementById('etapaChart'),{
   type:'doughnut',
   data:{labels:etapaLabels,datasets:[{data:etapaVals,backgroundColor:etapaColors,borderWidth:2,borderColor:'#fff'}]},
