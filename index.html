@@ -72,7 +72,7 @@
     <div class="header-sub">CRM · Seguimiento de ventas y leads 2026</div>
   </div>
   <div class="header-date">
-    Actualizado: 14 Jul 2026 20:28<br>
+    Actualizado: 14 Jul 2026 20:30<br>
     Período: 2025 – 2026<br>
     Fuente: Odoo CRM
     <br><span class="update-badge">🔄 Auto-actualizado</span>
@@ -97,7 +97,7 @@
   </div>
   <div class="kpi-tile" style="--accent-bar:#16a34a;">
     <div class="kpi-lbl">Leads nuevos sem 29</div>
-    <div class="kpi-val">32 <span class="badge bd-green">cumple ✓</span></div>
+    <div class="kpi-val">34 <span class="badge bd-green">cumple ✓</span></div>
     <div class="kpi-note">semana actual · meta 3/semana</div>
   </div>
   <div class="kpi-tile" style="--accent-bar:#ef4444;">
@@ -108,7 +108,7 @@
   <div class="kpi-tile" style="--accent-bar:#6b7280;">
     <div class="kpi-lbl">Oportunidades totales</div>
     <div class="kpi-val">69</div>
-    <div class="kpi-note">11 perdidas · 52 activas</div>
+    <div class="kpi-note">9 perdidas · 54 activas</div>
   </div>
 </div>
 
@@ -135,8 +135,8 @@
   </div>
 
   <div class="card">
-    <div class="card-title">KPI 2 — Leads nuevos semanales al CRM <span class="badge bd-green">32 · sem 29 ✓</span></div>
-    <div class="kpi-detail-big" style="color:#16a34a;">32</div>
+    <div class="card-title">KPI 2 — Leads nuevos semanales al CRM <span class="badge bd-green">34 · sem 29 ✓</span></div>
+    <div class="kpi-detail-big" style="color:#16a34a;">34</div>
     <div class="kpi-detail-sub">leads nuevos esta semana · meta: 3 por semana</div>
     <div class="gauge-track"><div class="gauge-fill" style="width:100.0%;background:linear-gradient(90deg,#16a34a,#22c55e);"></div></div>
     <div class="gauge-labels"><span>Sem 29 actual</span><span>Meta: 3 leads</span><span>✓ cumple</span></div>
@@ -148,8 +148,8 @@
     </div>
     <div id="week-bars"></div>
     <div class="insight">
-      <strong>7 de 13 semanas</strong> han cumplido la meta de 3 leads.
-      Semana 29 registra <strong>32 leads nuevos</strong> — ✅ cumple.
+      <strong>6 de 13 semanas</strong> han cumplido la meta de 3 leads.
+      Semana 29 registra <strong>34 leads nuevos</strong> — ✅ cumple.
     </div>
   </div>
 </div>
@@ -181,7 +181,7 @@
 
 <div class="footer">
   <span>Asertis BPS · Dashboard Comercial · Brenda Maria Luna Fontalvo</span>
-  <span>Generado: 14/07/2026 20:28 · Datos: Odoo CRM</span>
+  <span>Generado: 14/07/2026 20:30 · Datos: Odoo CRM</span>
 </div>
 
 <script>
@@ -203,7 +203,7 @@ presData.forEach(d=>{
   </div>`;
 });
 
-const weekData = [{"sem": "S6", "n": 1, "actual": false}, {"sem": "S11", "n": 1, "actual": false}, {"sem": "S19", "n": 3, "actual": false}, {"sem": "S20", "n": 4, "actual": false}, {"sem": "S21", "n": 5, "actual": false}, {"sem": "S22", "n": 1, "actual": false}, {"sem": "S23", "n": 8, "actual": false}, {"sem": "S24", "n": 6, "actual": false}, {"sem": "S25", "n": 4, "actual": false}, {"sem": "S26", "n": 1, "actual": false}, {"sem": "S27", "n": 2, "actual": false}, {"sem": "S28", "n": 1, "actual": false}, {"sem": "S29", "n": 32, "actual": true}];
+const weekData = [{"sem": "S6", "n": 1, "actual": false}, {"sem": "S11", "n": 1, "actual": false}, {"sem": "S19", "n": 1, "actual": false}, {"sem": "S20", "n": 4, "actual": false}, {"sem": "S21", "n": 5, "actual": false}, {"sem": "S22", "n": 1, "actual": false}, {"sem": "S23", "n": 8, "actual": false}, {"sem": "S24", "n": 6, "actual": false}, {"sem": "S25", "n": 4, "actual": false}, {"sem": "S26", "n": 1, "actual": false}, {"sem": "S27", "n": 2, "actual": false}, {"sem": "S28", "n": 1, "actual": false}, {"sem": "S29", "n": 34, "actual": true}];
 const META=3;
 const maxW=Math.max(...weekData.map(d=>d.n),META);
 const weekEl=document.getElementById('week-bars');
@@ -226,7 +226,7 @@ weekData.forEach(d=>{
 
 const funnelColors=['rgba(37,99,235,0.2)','rgba(37,99,235,0.35)','rgba(37,99,235,0.5)',
   'rgba(37,99,235,0.65)','rgba(37,99,235,0.85)','#16a34a','rgba(0,0,0,0.1)'];
-const funnelData=[{"e": "Nuevo", "n": 33}, {"e": "Contactado", "n": 11}, {"e": "Seguimiento", "n": 0}, {"e": "Propuesta", "n": 6}, {"e": "Negociaci\u00f3n", "n": 2}, {"e": "Ganado", "n": 6}, {"e": "Perdido", "n": 11}];
+const funnelData=[{"e": "Nuevo", "n": 35}, {"e": "Contactado", "n": 11}, {"e": "Seguimiento", "n": 0}, {"e": "Propuesta", "n": 6}, {"e": "Negociaci\u00f3n", "n": 2}, {"e": "Ganado", "n": 6}, {"e": "Perdido", "n": 9}];
 const maxF=Math.max(...funnelData.map(d=>d.n));
 const funnelEl=document.getElementById('funnel');
 funnelData.forEach((d,i)=>{
@@ -273,7 +273,7 @@ new Chart(document.getElementById('presChart'),{
 
 const etapaColors=['rgba(0,0,0,0.1)','#16a34a','#2563eb','rgba(37,99,235,0.35)','#0d9488','rgba(37,99,235,0.6)','#ef4444'];
 const etapaLabels=["Perdido", "Ganado", "Contactado", "Propuesta", "Seguimiento", "Nuevo", "Negociaci\u00f3n"];
-const etapaVals=[12, 11, 12, 7, 1, 33, 4];
+const etapaVals=[10, 11, 12, 7, 1, 35, 4];
 new Chart(document.getElementById('etapaChart'),{
   type:'doughnut',
   data:{labels:etapaLabels,datasets:[{data:etapaVals,backgroundColor:etapaColors,borderWidth:2,borderColor:'#fff'}]},
