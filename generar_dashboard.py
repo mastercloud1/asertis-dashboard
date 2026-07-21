@@ -134,7 +134,7 @@ html = f"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Comercial · Brenda Maria Luna Fontalvo · Asertis BPS</title>
+<title>Dashboard Comercial Asertis BPS</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
@@ -198,8 +198,8 @@ html = f"""<!DOCTYPE html>
 <div class="header">
   <div class="header-left">
     {"<img src='data:image/png;base64," + logo_b64 + "' alt='Asertis BPS' style='height:64px;width:auto;margin-bottom:14px;display:block;'>" if logo_b64 else ""}
-    <div class="header-eyebrow">Dashboard Comercial</div>
-    <div class="header-title">Brenda Maria Luna Fontalvo</div>
+    <div class="header-eyebrow">Asertis BPS · CRM Comercial</div>
+    <div class="header-title">Dashboard Comercial Asertis BPS</div>
     <div class="header-sub">CRM · Seguimiento de ventas y leads {ANO_ACTUAL}</div>
   </div>
   <div class="header-date">
@@ -288,7 +288,7 @@ html = f"""<!DOCTYPE html>
 
 <div class="main-grid" style="margin-bottom:16px;">
   <div class="card">
-    <div class="card-title">Embudo de ventas — Brenda Luna</div>
+    <div class="card-title">Embudo de ventas — {VENDEDOR.split()[0]} {VENDEDOR.split()[1]}</div>
     <div id="funnel"></div>
   </div>
   <div class="card">
@@ -312,7 +312,7 @@ html = f"""<!DOCTYPE html>
 </div>
 
 <div class="footer">
-  <span>Asertis BPS · Dashboard Comercial · Brenda Maria Luna Fontalvo</span>
+  <span>Asertis BPS · Dashboard Comercial</span>
   <span>Generado: {HOY.strftime('%d/%m/%Y %H:%M')} · Datos: Odoo CRM</span>
 </div>
 
