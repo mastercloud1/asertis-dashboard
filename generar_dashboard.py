@@ -28,6 +28,10 @@ MES_ACTUAL = HOY.month
 ANO_ACTUAL = HOY.year
 SEM_ACTUAL = int(HOY.isocalendar()[1])
 
+MESES_NOMBRE = ["Enero","Febrero","Marzo","Abril","Mayo","Junio",\
+                "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+NOMBRE_MES   = MESES_NOMBRE[MES_ACTUAL - 1]
+
 brenda       = crm[crm['Vendedor'] == VENDEDOR].copy()
 brenda['semana'] = brenda['creado_dt'].apply(lambda d: int(d.isocalendar()[1]) if d else None)
 brenda['anio']   = brenda['creado_dt'].apply(lambda d: int(d.year) if d else None)
@@ -213,7 +217,7 @@ html = f"""<!DOCTYPE html>
     <div class="kpi-note">COP · {len(brenda_ganado)} negocios cerrados</div>
   </div>
   <div class="kpi-tile" style="--accent-bar:{strip_cumpl_bar};">
-    <div class="kpi-lbl">Cumplimiento mayo</div>
+    <div class="kpi-lbl">Cumplimiento {NOMBRE_MES}</div>
     <div class="kpi-val">{cumplimiento}% <span class="badge {kpi1_badge_class}">{'meta ✓' if cumplimiento>=100 else 'en curso' if cumplimiento>=50 else 'alerta'}</span></div>
     <div class="kpi-note">{fmt_cop(total_mayo)} de {fmt_cop(pres_mes)}</div>
   </div>
@@ -255,7 +259,7 @@ html = f"""<!DOCTYPE html>
     </div>
     <div id="pres-bars"></div>
     <div class="insight">
-      <strong>{fmt_cop(total_mayo)} COP</strong> cerrados en mayo 2026.
+      <strong>{fmt_cop(total_mayo)} COP</strong> cerrados en {NOMBRE_MES} {ANO_ACTUAL}.
       Cumplimiento del <strong>{cumplimiento}%</strong> sobre la meta de {fmt_cop(pres_mes)}.
       {'✅ Meta alcanzada.' if cumplimiento>=100 else f'Faltan <strong>{fmt_cop(faltan)}</strong> para completar el mes.'}
     </div>
